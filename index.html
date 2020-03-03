@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Linux Commands</title>
+    	<link rel="stylesheet" type="text/css" href="main.css">
+
+  </head>
+  <!-- //................................................................................................................................................................
+  //.......................................................................................................................................ddddd....................
+  //.......................................................................................................................................ddddd....................
+  //.......................................................................................................................................ddddd....................
+  //.......................................................................................................................................ddddd....................
+  //.......................................................................................................................................ddddd....................
+  //.......................................................................................................................................ddddd....................
+  //....cccccccccc.......oooooooooo.....ommmmmmmmmmmm..mmmmmmmm....mmmmmmmmmmmmm..mmmmmmm......aaaaaaaaaaa....annnnnnnnnnnnn.......ddddddddddddd....sssssssssss.....
+  //...cccccccccccc.....oooooooooooo....ommmmmmmmmmmmmmmmmmmmmmm...mmmmmmmmmmmmmmmmmmmmmmm....aaaaaaaaaaaaa...annnnnnnnnnnnnn.....dddddddddddddd...sssssssssssss....
+  //..cccccccccccccc...oooooooooooooo...ommmmmmmmmmmmmmmmmmmmmmm...mmmmmmmmmmmmmmmmmmmmmmmm...aaaaaaaaaaaaa...annnnnnnnnnnnnnn...ddddddddddddddd...ssssssssssssss...
+  //.ccccccccccccccc..oooooooooooooooo..ommmmmmmmmmmmmmmmmmmmmmm...mmmmmmmmmmmmmmmmmmmmmmmm..maaaaaaaaaaaaaa..annnnnnn.nnnnnnn..nddddddddddddddd..dssssss.sssssss...
+  //.cccccc...cccccc..oooooo....oooooo..ommmmm...mmmmmmm..mmmmmm...mmmmmm...mmmmmmm..mmmmmm..maaaaa...aaaaaa..annnnnn...nnnnnn..nddddd....dddddd..dsssss...ssssss...
+  //.cccccc..........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm...mmmmmm...........aaaaaa..annnnn....nnnnnn..nddddd....dddddd..dsssssss..........
+  //.ccccc...........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm.......aaaaaaaaaa..annnnn....nnnnnn..ndddd......ddddd..dsssssssssss......
+  //.ccccc...........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm....aaaaaaaaaaaaa..annnnn....nnnnnn..ndddd......ddddd...sssssssssssss....
+  //.ccccc...........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn..ndddd......ddddd....sssssssssssss...
+  //.ccccc...........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn..ndddd......ddddd......ssssssssssss..
+  //.cccccc..........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaa...aaaaaa..annnnn....nnnnnn..nddddd....dddddd..........ssssssss..
+  //.cccccc...cccccc..oooooo....oooooo..ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaa....aaaaaa..annnnn....nnnnnn..nddddd....dddddd..dsssss....ssssss..
+  //.ccccccccccccccc..oooooooooooooooo..ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn..nddddddddddddddd..dssssss.ssssssss..
+  //..cccccccccccccc...oooooooooooooo...ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn...ddddddddddddddd..dssssssssssssss...
+  //...cccccccccccc.....oooooooooooo....ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn....dddddddddddddd...ssssssssssssss...
+  //....cccccccccc.......oooooooooo.....ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm...aaaaaaaaaaaaaaa.annnnn....nnnnnn.....ddddddddddddd....sssssssssss.....
+  //................................................................................................................................................................ -->
+
+
+
+
+  <body>
+    <div class="header">
+      <div class="decoration">
+        <img src="falloutCommans.png" alt="">
+        <div class="decorationP">
+            <p>:~$</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="inputTitle" id="inputTitle">
+      <h1>Linux commands:~$</h1>
+      <h6>known commands <span id="knownCommands">0</span> </h6>
+      <input type="text" id="myInput" onkeyup="searchList()" placeholder="Search for command.." title="Type in a name">
+      <button onclick="sortListDir()">order</button>
+    </div>
+
+
+    <ul class="list" id=myUL>
+      <li id="ifconfig">ifconfig<a href="#ifconfig" class="clickable-heading">ifconfig</a>
+        <div class="content hide">
+            <h2>ifconfig</h2>
+        </div>
+      </li>
+      <li id="groups">groups<a href="#groups" class="clickable-heading">groups</a>
+        <div class="content hide">
+            <h2>groups</h2>
+        </div>
+      </li>
+      <li id="kinit">kinit<a href="#kinit"  class="clickable-heading">kinit</a>
+        <div class="content hide">
+            <h2>kinit</h2>
+        </div>
+      </li>
+      <li id="patch">patch<a href="#patch"  class="clickable-heading">patch</a>
+        <div class="content hide">
+            <h2>patch</h2>
+        </div>
+      </li>
+      <li id="cat">cat<a href="#cat"  class="clickable-heading">cat</a>
+        <div class="content hide">
+            <h2>cat</h2>
+        </div>
+      </li>
+      <li id="cd">cd<a href="#cd"  class="clickable-heading">cd</a>
+        <div class="content hide">
+            <h2>cd</h2>
+        </div>
+      </li>
+      <li id="vim">vim<a href="#vim"  class="clickable-heading">vim</a>
+        <div class="content hide">
+            <h2>vim</h2>
+        </div>
+      </li>
+      <li id="touch">touch<a href="#touch"  class="clickable-heading">touch</a>
+        <div class="content hide">
+            <h2>touch</h2>
+        </div>
+      </li>
+      <li id="find">find<a href="#find"  class="clickable-heading">find</a>
+        <div class="content hide">
+            <h2>find</h2>
+        </div>
+      </li>
+      <li id="env">env<a href="#env"  class="clickable-heading">env</a>
+        <div class="content hide">
+            <h2>env</h2>
+        </div>
+      </li>
+      <li id="mkdir">mkdir<a href="#mkdir"  class="clickable-heading">mkdir</a>
+        <div class="content hide">
+            <h2>mkdir</h2>
+        </div>
+      </li>
+      <li id="grep">grep<a href="#grep"  class="clickable-heading">grep</a>
+        <div class="content hide">
+            <h2>grep</h2>
+        </div>
+      </li>
+      <li id="git">git<a href="#git"  class="clickable-heading">git</a>
+        <div class="content hide">
+            <h2>git</h2>
+        </div>
+      </li>
+      <li id="chmod">chmod<a href="#chmod"  class="clickable-heading">chmod</a>
+        <div class="content hide">
+            <h2>chmod</h2>
+        </div>
+      </li>
+      <li id="bash">bash<a href="#bash"  class="clickable-heading">bash</a>
+        <div class="content hide">
+            <h2>bash</h2>
+        </div>
+      </li>
+      <li id="file">file<a href="#file"  class="clickable-heading">file</a>
+        <div class="content hide">
+            <h2>file</h2>
+        </div>
+      </li>
+      <li id="wc">wc<a href="#wc"  class="clickable-heading">wc</a>
+        <div class="content hide">
+            <h2>wc</h2>
+        </div>
+      </li>
+      <li id="klist">klist<a href="#klist"  class="clickable-heading">klist</a>
+        <div class="content hide">
+            <h2>klist</h2>
+        </div>
+      </li>
+      <li id="pwd">pwd<a href="#pwd"  class="clickable-heading">pwd</a>
+        <div class="content hide">
+            <h2>pwd</h2>
+        </div>
+      </li>
+      <li id="ls">ls<a href="#pwd"  class="clickable-heading">ls</a>
+        <div class="content hide">
+            <h2>ls</h2>
+        </div>
+      </li>
+
+
+    <!-- <div class="sidenav">
+      <div class="bootProcess">
+        <h2>The boot process</h2>
+        <img src="bootProcess.jpg" alt="">
+
+      </div>
+
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

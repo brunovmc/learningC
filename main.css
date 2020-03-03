@@ -1,0 +1,369 @@
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.displayNone{
+  display: none;
+}
+
+.transparent{
+  opacity: 0;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+/* <!-- //...................................................................................................................................................................................
+//.TTTTTTTTTTTTTTTTTT......................................................mmiii.......................................ooolll........................................................
+//.TTTTTTTTTTTTTTTTTT......................................................mmiii.......................................ooolll........................................................
+//.TTTTTTTTTTTTTTTTTT......................................................mmiii.......................................ooolll........................................................
+//.TTTTTTTTTTTTTTTTTT..................................................................................................ooolll........................................................
+//.......TTTTTT........................................................................................................ooolll........................................................
+//.......TTTTTT........................................................................................................ooolll........................................................
+//.......TTTTTT.......eeeeeeeee.....eeerrrrrrrrrrrmmmmmmmmmmm.mmmmmmmm.....mmiii...iinnnnnnnnnnnn.......oooooooooo.....ooolll......ooooooooo........oggggggg.ggggggggggy......yyyyy..
+//.......TTTTTT.....TTeeeeeeeeee....eeerrrrrrrrrrrmmmmmmmmmmmmmmmmmmmmm....mmiii...iinnnnnnnnnnnnn.....nooooooooooo....ooolll....loooooooooooo.....ooggggggggggggg.ggggyy....yyyyyy..
+//.......TTTTTT.....TTeeeeeeeeeee...eeerrrrrrrrrrrmmmmmmmmmmmmmmmmmmmmmm...mmiii...iinnnnnnnnnnnnn....nnoooooooooooo...ooolll...llooooooooooooo...oooggggggggggggg.ggggyy....yyyyyy..
+//.......TTTTTT....TTTeeeeeeeeeeee..eeerrrrr...rrrmmmmm.mmmmmmmmmmmmmmmm...mmiii...iinnnnnnnnnnnnn...nnnooooooooooooo..ooolll...lloooooooooooooo..ooogggg.gggggggg.ggggyy....yyyyyy..
+//.......TTTTTT....TTTeee...eeeeee..eeerrrr....rrrmmmm...mmmmmm...mmmmmm...mmiii...iinnnn...nnnnnnn..nnnooo....oooooo..ooolll..llloooo....oooooo.ooooggg...ggggggg..gggyyy..yyyyyy...
+//.......TTTTTT...TTTTee.....eeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnnn....nnnnnn.nnnnoo......oooooo.ooolll..lllooo.....oooooo.oooogg.....gggggg..gggyyy..yyyyyy...
+//.......TTTTTT...TTTTeeeeeeeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnnn....nnnnnn.nnnnoo......oooooo.ooolll..lllooo......oooooooooogg.....gggggg..gggyyy..yyyyy....
+//.......TTTTTT...TTTTeeeeeeeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.nnnnoo......oooooo.ooolll..llloo.......oooooooooogg.....gggggg...ggyyyyyyyyyy....
+//.......TTTTTT...TTTTeeeeeeeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.nnnnoo......oooooo.ooolll..llloo.......oooooooooogg.....gggggg...ggyyyyyyyyyy....
+//.......TTTTTT...TTTTee............eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.nnnnoo......oooooo.ooolll..lllooo......ooooo.oooogg.....gggggg....gyyyyyyyyy.....
+//.......TTTTTT...TTTTee............eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.nnnnoo......oooooo.ooolll..lllooo.....oooooo.oooogg.....gggggg....gyyyyyyyyy.....
+//.......TTTTTT....TTTeee...........eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn..nnnooo....oooooo..ooolll..llloooo....oooooo.ooooggg...ggggggg....gyyyyyyyyy.....
+//.......TTTTTT....TTTeeee.eeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn..nnnooooooooooooo..ooolll...lloooooooooooooo..oooggggggggggggg.....yyyyyyyy......
+//.......TTTTTT.....TTeeeeeeeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn...nnoooooooooooo...ooolll...llooooooooooooo...oooggggggggggggg.....yyyyyyyy......
+//.......TTTTTT.....TTeeeeeeeeeee...eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn....nooooooooooo....ooolll....loooooooooooo.....ooggggggggggggg.....yyyyyyyy......
+//.......TTTTTT.......eeeeeeeeee....eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.....oooooooooo.....ooolll......ooooooooo........oggggggggggggg......yyyyyy.......
+//..........................................................................................................................................................gggggg......yyyyyy.......
+//................................................................................................................................................ooogg.....gggggg.....yyyyyy........
+//................................................................................................................................................ooogggg.ggggggg...g.gyyyyyy........
+//................................................................................................................................................ooogggggggggggg...gggyyyyyy........
+//.................................................................................................................................................ooggggggggggg....gggyyyyy.........
+//..................................................................................................................................................ogggggggggg.....gggyyyy..........
+//................................................................................................................................................................................... --> */
+
+
+body{
+	/* background-color:#161c30; */
+	background-color: #3c3a3a;
+	overflow-x: hidden;
+}
+.header{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  margin-top: 19%;
+  font-size: 3em;
+
+}
+
+.content{
+
+	margin-top: 3%;
+	width: 70%;
+	height: 100%;
+	text-align: left;
+	color: black!important;
+	display: inline-block;
+	background-color: white;
+	margin-left: 10%;
+	border-radius: 40px;
+	padding: 40px;
+	border-radius: 40px;
+	border:20px solid grey;
+}
+
+.content:last-of-type{
+  margin-bottom: 5%;
+}
+
+.list{
+
+
+}
+
+
+.inputTitle{
+	position: sticky!important;
+	top: 0;
+	z-index: 1;
+	font-size: 60px;
+	margin-left: 23%;
+	width: 80%;
+	transition: 0.2s;
+}
+
+.decoration{
+	color: #53ba23;
+	font-size: 0.9em;
+	display: inline;
+	position: fixed;
+	margin-left: -13.8%;
+	margin-top: -15.8%;
+	z-index: -2;
+	transform: rotate(-13deg);
+}
+.decorationP{
+	color: #53ba23;
+	font-size: 0.9em;
+	display: inline;
+	position: fixed;
+	margin-left: -64.8%;
+	margin-top: 32.8%;
+	z-index: 0;
+	transform: rotate(-13deg);
+}
+
+.decorationP img{
+	transform: scale(0.15);
+}
+
+
+
+.sidenav {
+	width: 27%;
+	position: fixed;
+	z-index: 1;
+	top: 20px;
+	left: 10px;
+	overflow-x: hidden;
+	margin-top: 6%;
+	border-radius: 40px;
+	margin-left: 82.6%;
+	border: 20px solid grey;
+	background-color: white;
+	display: block;
+}
+
+#myUL #partitionTable .tableHeader{
+	background-color: #003f60;
+	height: 40px;
+	width: 440px;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+
+}
+
+#myUL #partitionTable .tableColumn{
+	background-color:#e8e8e8;
+	height: 40px;
+	width: 440px;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+
+ul li{
+  color: transparent;
+	/* position: sticky;
+	top: 18% */
+	background-color: cadetblue;
+	margin-bottom: 0.4%;
+	border-radius: 40px;
+
+}
+
+
+
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 70%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: -7%;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+	margin-bottom: 5%;
+	width: 100%;
+}
+
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -0.9%; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 32px;
+  color: black;
+  display: block;
+	width: 70%;
+	margin-left: 10%;
+	border-radius: 40px;
+	text-align: center;
+}
+
+#myUL li a.link{
+	color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+	border: none;
+	margin-top: 0;
+	background-color: inherit;
+	padding: 0;
+	font-size: inherit;
+	display: inline;
+	width: 100%;
+	margin-left: 0;
+}
+
+#myUL li a.link:hover{
+	background-color: inherit;
+}
+
+#myUL li p{
+	font-size: 1.1em;
+}
+
+.roundBtn{
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+}
+.roundBtn:hover{
+	transform: scale(0.95);
+}
+
+.roundBtn:focus{
+	outline: none;
+}
+
+
+.bootProcess h2{
+	background-color: white;
+	padding-left: 14%;
+}
+
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+.show {
+  transition: opacity 400ms;
+  display: inline-block;
+}
+.hide {
+  display: none;
+}
+
+.buttonWrap{
+	position: fixed;
+}
+
+.buttonWrap button{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	margin-right: 10%;
+}
+
+
+
+.sideButton{
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	text-align: center;
+	font-size: 40px;
+	border-radius: 40px;
+	margin-top: -35%;
+	margin-left: -75%;
+	border:2px solid black;
+
+}
+
+.sideButton:hover{
+	cursor: pointer;
+	transform: scale(0.95);
+}
+
+.sideButton:active{
+	transform: scale(0.9);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+	.header{
+		margin-top:9%;
+	}
+	.decoration{
+		transform: scale(0.6);
+		margin-left: -20.8%;
+		margin-top: -9%;
+	}
+
+	.title{
+		transform: scale(0.5);
+		width: 300%;
+		margin-left: 8%;
+	}
+
+	#inputTitle{
+		width: 100%;
+	}
+
+	#myInput{
+		width:77%%;
+		display: inline;
+	}
+
+	#myUL  li {
+		width: 261%;
+	}
+	#myUL li a{
+		width: 80%;
+	}
+
+	.content{
+		width: 80%;
+	}
+
+	#bashImage{
+			transform: scale(0.7);
+			margin-left: -25%;
+	}
+
+  #sidenav{
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		top: 20px;
+		left: 10px;
+		overflow-x: hidden;
+		margin-top: 25%!important;
+		margin-left: 55%!important;
+	}
+
+	#filesystemHierarchyimage{
+		transform: scale(0.6);
+    margin-left: -30%;
+	}
+
+}
