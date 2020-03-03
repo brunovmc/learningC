@@ -22,44 +22,13 @@
 }
 
 
-/* ------------------------------------------------------------------------------------------------------------------------------ */
-
-/* <!-- //...................................................................................................................................................................................
-//.TTTTTTTTTTTTTTTTTT......................................................mmiii.......................................ooolll........................................................
-//.TTTTTTTTTTTTTTTTTT......................................................mmiii.......................................ooolll........................................................
-//.TTTTTTTTTTTTTTTTTT......................................................mmiii.......................................ooolll........................................................
-//.TTTTTTTTTTTTTTTTTT..................................................................................................ooolll........................................................
-//.......TTTTTT........................................................................................................ooolll........................................................
-//.......TTTTTT........................................................................................................ooolll........................................................
-//.......TTTTTT.......eeeeeeeee.....eeerrrrrrrrrrrmmmmmmmmmmm.mmmmmmmm.....mmiii...iinnnnnnnnnnnn.......oooooooooo.....ooolll......ooooooooo........oggggggg.ggggggggggy......yyyyy..
-//.......TTTTTT.....TTeeeeeeeeee....eeerrrrrrrrrrrmmmmmmmmmmmmmmmmmmmmm....mmiii...iinnnnnnnnnnnnn.....nooooooooooo....ooolll....loooooooooooo.....ooggggggggggggg.ggggyy....yyyyyy..
-//.......TTTTTT.....TTeeeeeeeeeee...eeerrrrrrrrrrrmmmmmmmmmmmmmmmmmmmmmm...mmiii...iinnnnnnnnnnnnn....nnoooooooooooo...ooolll...llooooooooooooo...oooggggggggggggg.ggggyy....yyyyyy..
-//.......TTTTTT....TTTeeeeeeeeeeee..eeerrrrr...rrrmmmmm.mmmmmmmmmmmmmmmm...mmiii...iinnnnnnnnnnnnn...nnnooooooooooooo..ooolll...lloooooooooooooo..ooogggg.gggggggg.ggggyy....yyyyyy..
-//.......TTTTTT....TTTeee...eeeeee..eeerrrr....rrrmmmm...mmmmmm...mmmmmm...mmiii...iinnnn...nnnnnnn..nnnooo....oooooo..ooolll..llloooo....oooooo.ooooggg...ggggggg..gggyyy..yyyyyy...
-//.......TTTTTT...TTTTee.....eeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnnn....nnnnnn.nnnnoo......oooooo.ooolll..lllooo.....oooooo.oooogg.....gggggg..gggyyy..yyyyyy...
-//.......TTTTTT...TTTTeeeeeeeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnnn....nnnnnn.nnnnoo......oooooo.ooolll..lllooo......oooooooooogg.....gggggg..gggyyy..yyyyy....
-//.......TTTTTT...TTTTeeeeeeeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.nnnnoo......oooooo.ooolll..llloo.......oooooooooogg.....gggggg...ggyyyyyyyyyy....
-//.......TTTTTT...TTTTeeeeeeeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.nnnnoo......oooooo.ooolll..llloo.......oooooooooogg.....gggggg...ggyyyyyyyyyy....
-//.......TTTTTT...TTTTee............eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.nnnnoo......oooooo.ooolll..lllooo......ooooo.oooogg.....gggggg....gyyyyyyyyy.....
-//.......TTTTTT...TTTTee............eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.nnnnoo......oooooo.ooolll..lllooo.....oooooo.oooogg.....gggggg....gyyyyyyyyy.....
-//.......TTTTTT....TTTeee...........eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn..nnnooo....oooooo..ooolll..llloooo....oooooo.ooooggg...ggggggg....gyyyyyyyyy.....
-//.......TTTTTT....TTTeeee.eeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn..nnnooooooooooooo..ooolll...lloooooooooooooo..oooggggggggggggg.....yyyyyyyy......
-//.......TTTTTT.....TTeeeeeeeeeeee..eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn...nnoooooooooooo...ooolll...llooooooooooooo...oooggggggggggggg.....yyyyyyyy......
-//.......TTTTTT.....TTeeeeeeeeeee...eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn....nooooooooooo....ooolll....loooooooooooo.....ooggggggggggggg.....yyyyyyyy......
-//.......TTTTTT.......eeeeeeeeee....eeerrr.....rrrmmm....mmmmmm...mmmmmm...mmiii...iinnn.....nnnnnn.....oooooooooo.....ooolll......ooooooooo........oggggggggggggg......yyyyyy.......
-//..........................................................................................................................................................gggggg......yyyyyy.......
-//................................................................................................................................................ooogg.....gggggg.....yyyyyy........
-//................................................................................................................................................ooogggg.ggggggg...g.gyyyyyy........
-//................................................................................................................................................ooogggggggggggg...gggyyyyyy........
-//.................................................................................................................................................ooggggggggggg....gggyyyyy.........
-//..................................................................................................................................................ogggggggggg.....gggyyyy..........
-//................................................................................................................................................................................... --> */
 
 
 body{
 	/* background-color:#161c30; */
-	background-color: #3c3a3a;
+	background-color: #000;
 	overflow-x: hidden;
+	color: white;
 }
 .header{
   width: 100%;
@@ -77,9 +46,9 @@ body{
 	width: 70%;
 	height: 100%;
 	text-align: left;
-	color: black!important;
+	color: #fff;
 	display: inline-block;
-	background-color: white;
+	background-color: #000;
 	margin-left: 10%;
 	border-radius: 40px;
 	padding: 40px;
@@ -107,6 +76,25 @@ body{
 	transition: 0.2s;
 }
 
+.white{
+	color: #fff!important;
+}
+
+.cyan{
+	color: #34ebeb!important;
+}
+
+.magenta{
+	color:#e834eb!important;
+}
+
+.green{
+	color: #57d964!important;
+}
+
+.yellow{
+	color: #d6d024!important;
+}
 .decoration{
 	color: #53ba23;
 	font-size: 0.9em;
@@ -117,6 +105,21 @@ body{
 	z-index: -2;
 	transform: rotate(-13deg);
 }
+
+.lang{
+	float: right;
+	display: inline;
+	margin-top: -15%;
+	margin-right: 10%;
+}
+
+.flag{
+	display: inline-block;
+}
+.flag:hover{
+	cursor: pointer;
+}
+
 .decorationP{
 	color: #53ba23;
 	font-size: 0.9em;
@@ -172,9 +175,9 @@ ul li{
   color: transparent;
 	/* position: sticky;
 	top: 18% */
-	background-color: cadetblue;
+	background-color: #000;
 	margin-bottom: 0.4%;
-	border-radius: 40px;
+	/* border-radius: 40px; */
 
 }
 
@@ -228,6 +231,8 @@ ul li{
 	width: 100%;
 	margin-left: 0;
 }
+
+
 
 #myUL li a.link:hover{
 	background-color: inherit;

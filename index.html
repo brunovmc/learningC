@@ -2,158 +2,171 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Linux Commands</title>
+    <title>C functions</title>
     	<link rel="stylesheet" type="text/css" href="main.css">
 
   </head>
-  <!-- //................................................................................................................................................................
-  //.......................................................................................................................................ddddd....................
-  //.......................................................................................................................................ddddd....................
-  //.......................................................................................................................................ddddd....................
-  //.......................................................................................................................................ddddd....................
-  //.......................................................................................................................................ddddd....................
-  //.......................................................................................................................................ddddd....................
-  //....cccccccccc.......oooooooooo.....ommmmmmmmmmmm..mmmmmmmm....mmmmmmmmmmmmm..mmmmmmm......aaaaaaaaaaa....annnnnnnnnnnnn.......ddddddddddddd....sssssssssss.....
-  //...cccccccccccc.....oooooooooooo....ommmmmmmmmmmmmmmmmmmmmmm...mmmmmmmmmmmmmmmmmmmmmmm....aaaaaaaaaaaaa...annnnnnnnnnnnnn.....dddddddddddddd...sssssssssssss....
-  //..cccccccccccccc...oooooooooooooo...ommmmmmmmmmmmmmmmmmmmmmm...mmmmmmmmmmmmmmmmmmmmmmmm...aaaaaaaaaaaaa...annnnnnnnnnnnnnn...ddddddddddddddd...ssssssssssssss...
-  //.ccccccccccccccc..oooooooooooooooo..ommmmmmmmmmmmmmmmmmmmmmm...mmmmmmmmmmmmmmmmmmmmmmmm..maaaaaaaaaaaaaa..annnnnnn.nnnnnnn..nddddddddddddddd..dssssss.sssssss...
-  //.cccccc...cccccc..oooooo....oooooo..ommmmm...mmmmmmm..mmmmmm...mmmmmm...mmmmmmm..mmmmmm..maaaaa...aaaaaa..annnnnn...nnnnnn..nddddd....dddddd..dsssss...ssssss...
-  //.cccccc..........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm...mmmmmm...........aaaaaa..annnnn....nnnnnn..nddddd....dddddd..dsssssss..........
-  //.ccccc...........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm.......aaaaaaaaaa..annnnn....nnnnnn..ndddd......ddddd..dsssssssssss......
-  //.ccccc...........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm....aaaaaaaaaaaaa..annnnn....nnnnnn..ndddd......ddddd...sssssssssssss....
-  //.ccccc...........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn..ndddd......ddddd....sssssssssssss...
-  //.ccccc...........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn..ndddd......ddddd......ssssssssssss..
-  //.cccccc..........cooooo......oooooo.ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaa...aaaaaa..annnnn....nnnnnn..nddddd....dddddd..........ssssssss..
-  //.cccccc...cccccc..oooooo....oooooo..ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaa....aaaaaa..annnnn....nnnnnn..nddddd....dddddd..dsssss....ssssss..
-  //.ccccccccccccccc..oooooooooooooooo..ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn..nddddddddddddddd..dssssss.ssssssss..
-  //..cccccccccccccc...oooooooooooooo...ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn...ddddddddddddddd..dssssssssssssss...
-  //...cccccccccccc.....oooooooooooo....ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm..maaaaaaaaaaaaaa..annnnn....nnnnnn....dddddddddddddd...ssssssssssssss...
-  //....cccccccccc.......oooooooooo.....ommmmm...mmmmmm....mmmmm...mmmmmm...mmmmmm....mmmmm...aaaaaaaaaaaaaaa.annnnn....nnnnnn.....ddddddddddddd....sssssssssss.....
-  //................................................................................................................................................................ -->
-
-
-
-
   <body>
+
+    <div class="lang">
+      <div class="flag" id="EN">EN</div>
+      <div class="flag" id="PT">PT</div>
+    </div>
+
     <div class="header">
       <div class="decoration">
         <img src="falloutCommans.png" alt="">
         <div class="decorationP">
-            <p>:~$</p>
+            <p>C</p>
         </div>
       </div>
 
     </div>
     <div class="inputTitle" id="inputTitle">
-      <h1>Linux commands:~$</h1>
-      <h6>known commands <span id="knownCommands">0</span> </h6>
-      <input type="text" id="myInput" onkeyup="searchList()" placeholder="Search for command.." title="Type in a name">
+      <h1 class="cyan">C functions</h1>
+      <h6><span class="yellow">known functions</span> (<span id="knownCommands" class="magenta">  0 </span>)</h6>
+      <input type="text" id="myInput" onkeyup="searchList()" placeholder="Search for function..." title="Type in a name">
       <button onclick="sortListDir()">order</button>
     </div>
 
 
     <ul class="list" id=myUL>
-      <li id="ifconfig">ifconfig<a href="#ifconfig" class="clickable-heading">ifconfig</a>
+      <li id="atoi">atoi<a href="#atoi" class="clickable-heading">atoi</a>
         <div class="content hide">
-            <h2>ifconfig</h2>
-        </div>
-      </li>
-      <li id="groups">groups<a href="#groups" class="clickable-heading">groups</a>
-        <div class="content hide">
-            <h2>groups</h2>
-        </div>
-      </li>
-      <li id="kinit">kinit<a href="#kinit"  class="clickable-heading">kinit</a>
-        <div class="content hide">
-            <h2>kinit</h2>
-        </div>
-      </li>
-      <li id="patch">patch<a href="#patch"  class="clickable-heading">patch</a>
-        <div class="content hide">
-            <h2>patch</h2>
-        </div>
-      </li>
-      <li id="cat">cat<a href="#cat"  class="clickable-heading">cat</a>
-        <div class="content hide">
-            <h2>cat</h2>
-        </div>
-      </li>
-      <li id="cd">cd<a href="#cd"  class="clickable-heading">cd</a>
-        <div class="content hide">
-            <h2>cd</h2>
-        </div>
-      </li>
-      <li id="vim">vim<a href="#vim"  class="clickable-heading">vim</a>
-        <div class="content hide">
-            <h2>vim</h2>
-        </div>
-      </li>
-      <li id="touch">touch<a href="#touch"  class="clickable-heading">touch</a>
-        <div class="content hide">
-            <h2>touch</h2>
-        </div>
-      </li>
-      <li id="find">find<a href="#find"  class="clickable-heading">find</a>
-        <div class="content hide">
-            <h2>find</h2>
-        </div>
-      </li>
-      <li id="env">env<a href="#env"  class="clickable-heading">env</a>
-        <div class="content hide">
-            <h2>env</h2>
-        </div>
-      </li>
-      <li id="mkdir">mkdir<a href="#mkdir"  class="clickable-heading">mkdir</a>
-        <div class="content hide">
-            <h2>mkdir</h2>
-        </div>
-      </li>
-      <li id="grep">grep<a href="#grep"  class="clickable-heading">grep</a>
-        <div class="content hide">
-            <h2>grep</h2>
-        </div>
-      </li>
-      <li id="git">git<a href="#git"  class="clickable-heading">git</a>
-        <div class="content hide">
-            <h2>git</h2>
-        </div>
-      </li>
-      <li id="chmod">chmod<a href="#chmod"  class="clickable-heading">chmod</a>
-        <div class="content hide">
-            <h2>chmod</h2>
-        </div>
-      </li>
-      <li id="bash">bash<a href="#bash"  class="clickable-heading">bash</a>
-        <div class="content hide">
-            <h2>bash</h2>
-        </div>
-      </li>
-      <li id="file">file<a href="#file"  class="clickable-heading">file</a>
-        <div class="content hide">
-            <h2>file</h2>
-        </div>
-      </li>
-      <li id="wc">wc<a href="#wc"  class="clickable-heading">wc</a>
-        <div class="content hide">
-            <h2>wc</h2>
-        </div>
-      </li>
-      <li id="klist">klist<a href="#klist"  class="clickable-heading">klist</a>
-        <div class="content hide">
-            <h2>klist</h2>
-        </div>
-      </li>
-      <li id="pwd">pwd<a href="#pwd"  class="clickable-heading">pwd</a>
-        <div class="content hide">
-            <h2>pwd</h2>
-        </div>
-      </li>
-      <li id="ls">ls<a href="#pwd"  class="clickable-heading">ls</a>
-        <div class="content hide">
-            <h2>ls</h2>
-        </div>
-      </li>
+            <h2>atoi</h2>
 
+            <p><span class="cyan">#include</span> <span class="magenta">&#60;stdlib.h&#62;</span></p>
+            <p><span class="green">int</span class="green"> atoi (<span class="green">const char</span> *str);</p>
+            <span class="pt displayNone">
+            <p>atoi() converte um string <span class="green">str</span> para um <span class="green">int</span></p>
+            </span>
+            <span class="en">
+              <p>atoi() converts a string <span class="green">str</span> to an <span class="green">int</span></p>
+              <p><span class="yellow">return</span> (<span class="magenta">0</span>);</p>
+            </span>
+        </div>
+      </li>
+      <li id="ft_substr">ft_substr<a href="#ft_substr" class="clickable-heading">ft_substr</a>
+        <div class="content hide">
+            <h2>ft_substr</h2>
+        </div>
+      </li>
+      <li id="memset">memset<a href="#memset" class="clickable-heading">memset</a>
+        <div class="content hide">
+            <h2>memset</h2>
+        </div>
+      </li>
+      <li id="bzero">bzero<a href="#bzero" class="clickable-heading">bzero</a>
+        <div class="content hide">
+            <h2>bzero</h2>
+        </div>
+      </li>
+      <li id="memcpy">memcpy<a href="#memcpy" class="clickable-heading">memcpy</a>
+        <div class="content hide">
+            <h2>memcpy</h2>
+        </div>
+      </li>
+      <li id="memccpy">memccpy<a href="#memccpy" class="clickable-heading">memccpy</a>
+        <div class="content hide">
+            <h2>memccpy</h2>
+        </div>
+      </li>
+      <li id="memmove">memmove<a href="#memmove" class="clickable-heading">memmove</a>
+        <div class="content hide">
+            <h2>memmove</h2>
+        </div>
+      </li>
+      <li id="memchr">memchr<a href="#memchr" class="clickable-heading">memchr</a>
+        <div class="content hide">
+            <h2>memchr</h2>
+        </div>
+      </li>
+      <li id="memcmp">memcmp<a href="#memcmp" class="clickable-heading">memcmp</a>
+        <div class="content hide">
+            <h2>memcmp</h2>
+        </div>
+      </li>
+      <li id="strlen">strlen<a href="#strlen" class="clickable-heading">strlen</a>
+        <div class="content hide">
+            <h2>strlen</h2>
+        </div>
+      </li>
+      <li id="strlcpy">strlcpy<a href="#strlcpy" class="clickable-heading">strlcpy</a>
+        <div class="content hide">
+            <h2>strlcpy</h2>
+        </div>
+      </li>
+      <li id="strlcat">strlcat<a href="#strlcat" class="clickable-heading">strlcat</a>
+        <div class="content hide">
+            <h2>strlcat</h2>
+        </div>
+      </li>
+      <li id="strchr">strchr<a href="#strchr" class="clickable-heading">strchr</a>
+        <div class="content hide">
+            <h2>strchr</h2>
+        </div>
+      </li>
+      <li id="strrchr">strrchr<a href="#strrchr" class="clickable-heading">strrchr</a>
+        <div class="content hide">
+            <h2>strrchr</h2>
+        </div>
+      </li>
+      <li id="strnstr">strnstr<a href="#strnstr" class="clickable-heading">strnstr</a>
+        <div class="content hide">
+            <h2>strnstr</h2>
+        </div>
+      </li>
+      <li id="strncmp">strncmp<a href="#strncmp" class="clickable-heading">strncmp</a>
+        <div class="content hide">
+            <h2>strncmp</h2>
+        </div>
+      </li>
+      <li id="isalpha">isalpha<a href="#isalpha" class="clickable-heading">isalpha</a>
+        <div class="content hide">
+            <h2>isalpha</h2>
+        </div>
+      </li>
+      <li id="isdigit">isdigit<a href="#isdigit" class="clickable-heading">isdigit</a>
+        <div class="content hide">
+            <h2>isdigit</h2>
+        </div>
+      </li>
+      <li id="isalnum">isalnum<a href="#isalnum" class="clickable-heading">isalnum</a>
+        <div class="content hide">
+            <h2>isalnum</h2>
+        </div>
+      </li>
+      <li id="isascii">isascii<a href="#isascii" class="clickable-heading">isascii</a>
+        <div class="content hide">
+            <h2>isascii</h2>
+        </div>
+      </li>
+      <li id="isprint">isprint<a href="#isprint" class="clickable-heading">isprint</a>
+        <div class="content hide">
+            <h2>isprint</h2>
+        </div>
+      </li>
+      <li id="toupper">toupper<a href="#toupper" class="clickable-heading">toupper</a>
+        <div class="content hide">
+            <h2>toupper</h2>
+        </div>
+      </li>
+      <li id="tolower">tolower<a href="#tolower" class="clickable-heading">tolower</a>
+        <div class="content hide">
+            <h2>tolower</h2>
+        </div>
+      </li>
+      <li id="calloc">calloc<a href="#calloc" class="clickable-heading">calloc</a>
+        <div class="content hide">
+            <h2>calloc</h2>
+        </div>
+      </li>
+      <li id="strdup">strdup<a href="#strdup" class="clickable-heading">strdup</a>
+        <div class="content hide">
+            <h2>strdup</h2>
+        </div>
+      </li>
+    </ul>
 
     <!-- <div class="sidenav">
       <div class="bootProcess">
