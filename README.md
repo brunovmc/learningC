@@ -1,4 +1,4 @@
-# C functions
+# C functions https://brunovmc.github.io/learningC/
 Uma tentativa de produzir manuais um pouco mais esclarecedores do que o deserto de informação que sao os man's
 
 criado por bvidigal @42saopaulo
