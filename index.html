@@ -37,10 +37,67 @@
 
             <p><span class="cyan">#include</span> <span class="magenta">&#60;stdlib.h&#62;</span></p>
             <p><span class="green">int</span class="green"> atoi (<span class="green">const char</span> *str);</p>
-            <span class="pt displayNone">
-            <p>atoi() converte um string <span class="green">str</span> para um <span class="green">int</span></p>
+            <span class="pt">
+              <p>atoi() converte um string <span class="green">str</span> para um <span class="green">int</span></p>
+              <p>
+                a função remove do inicio da string quantas vezes houver os seguintes:
+                <pre>
+                  <span class="pink">'\t'</span> horizontal tab
+                  <span class="pink">'\n'</span> newline
+                  <span class="pink">'\r'</span> cariagge return
+                  <span class="pink">'\v'</span> vertical tab
+                  <span class="pink">'\f'</span> formfeed page break
+                  <span class="magenta">' '</span>  space
+              </pre>
+              </p>
+              <p>verifica <u>uma vez</u> se o sinal é positivo ou negativo</p>
+              <p>verifica se os caracteres são numerais</p>
+              <p>Exemplo 1: <pre>atoi(<span class="magenta">"   ---+123d1"</span>);</pre></p>
+              <p><span class="yellow">return</span> (<span class="magenta">0</span>);</p>
+              <p>Exemplo 2: <pre>atoi(<span class="magenta">"   -123"</span>);</pre></p>
+              <p><span class="yellow">return</span> (<span class="magenta">-123</span>);</p>
+              <pre>
+
+              </pre>
+              <hr>
+              <pre>
+
+              </pre>
+              <h2>ft_atoi</h2>
+<pre>
+<span class="cyan">#include</span> <span class="magenta">"libft.h"</span>
+
+<span class="green">int</span>  ft_atoi(<span class="green">const char</span> *str)
+{
+  <span class="green">int</span> i;
+  <span class="green">int</span> n;
+  <span class="green">int</span> sinal;
+
+  i = <span class="magenta">0</span>;
+  <span class="yellow">while</span> (str[i] == <span class="pink">'\t'</span> || str[i] == <span class="pink">'\n'</span> || str[i] == <span class="pink">'\r'</span> ||
+          str[i] == <span class="pink">'\v'</span> || str[i] == <span class="pink">'\f'</span> || str[i] == <span class="magenta">' '</span>)
+        i++;
+  sinal = <span class="magenta">0</span>;
+  <span class="yellow">if</span> (str[i] == <span class="magenta">'-'</span> || str[i] == <span class="magenta">'+'</span>)
+  {
+      <span class="yellow">if</span> (str[i] == <span class="magenta">'-'</span>)
+          sinal = <span class="magenta">1</span>;
+      i++;
+  }
+  n = <span class="magenta">0</span>
+  while (str[i] >= <span class="magenta">'0'</span> && str[i] <= <span class="magenta">'9'</span>)
+  {
+      n = n * 10 + str[i] - <span class="magenta">'0'</span>;
+      i++;
+  }
+  <span class="yellow">if</span> (sinal > <span class="magenta">0</span>)
+      n = n * (-<span class="magenta">1</span>);
+  <span class="yellow">return</span> (n);
+}
+
+</pre>
             </span>
-            <span class="en">
+            <span class="en displayNone">
               <p>atoi() converts a string <span class="green">str</span> to an <span class="green">int</span></p>
               <p><span class="yellow">return</span> (<span class="magenta">0</span>);</p>
             </span>
@@ -164,6 +221,11 @@
       <li id="strdup">strdup<a href="#strdup" class="clickable-heading">strdup</a>
         <div class="content hide">
             <h2>strdup</h2>
+        </div>
+      </li>
+      <li id="ft_strjoin">ft_strjoin<a href="#ft_strjoin" class="clickable-heading">ft_strjoin</a>
+        <div class="content hide">
+            <h2>ft_strjoin</h2>
         </div>
       </li>
     </ul>

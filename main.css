@@ -95,6 +95,14 @@ body{
 .yellow{
 	color: #d6d024!important;
 }
+
+.pink{
+	color: #e07ed5!important;
+}
+
+pre{
+	font-size: 1.2em;
+}
 .decoration{
 	color: #53ba23;
 	font-size: 0.9em;

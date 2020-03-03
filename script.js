@@ -4,7 +4,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if(screen.width >= 900){
 
-    if (document.body.scrollTop > 370 || document.documentElement.scrollTop > 370) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       document.getElementById("inputTitle").style.fontSize = "28px";
       document.getElementById("inputTitle").style.margin = "0 0 0 65%";
       document.getElementById("myInput").style.width = "40%";
