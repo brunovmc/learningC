@@ -112,11 +112,69 @@ int  ft_atoi(const char *str)
 
         <div class="content hide">
             <h2>ft_substr</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_substr</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+char    *ft_substr(char const *s, unsigned int start, size_t len)
+{
+        size_t  i;
+        char    *sub;
+        size_t  start_copy;
+
+        start_copy = ((size_t)start);
+        if (s == 0)
+                return (0);
+        sub = malloc((len + 1) * sizeof(char));
+        if (sub == 0)
+                return (0);
+        i = 0;
+        while (i < len && start_copy < ft_strlen(s))
+        {
+                sub[i] = s[start_copy + i];
+                i++;
+        }
+        sub[i] = '\0';
+        return (sub);
+}
+
+</pre>
         </div>
       </li><!-- ==============================================================================================FT_SUBSTR=END=============================-->
       <li id="memset">memset<a href="#memset" class="clickable-heading">memset</a>
         <div class="content hide">
             <h2>memset</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_memset</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+void    *ft_memset(void *dest, int c, size_t len)
+{
+        if (len > 0)
+        {
+                while (len--)
+                {
+                        *(unsigned char *)(dest + len) = (unsigned char)(c);
+                }
+        }
+        return (dest);
+}
+
+</pre>
         </div>
       </li>
       <li id="bzero">bzero<a href="#bzero" class="clickable-heading">bzero</a> <!-- ==========================BZERO=BEGIN===========================-->
@@ -126,6 +184,25 @@ int  ft_atoi(const char *str)
 
             <p><span class="cyan">#include</span> <span class="magenta">&#60;strings.h&#62;</span></p>
             <p><span class="green">int</span class="green"> bzero (<span class="green">void</span> *s, <span class="green">size_t</span> n);</p>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_bzero</h2>
+
+
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+void  ft_bzero(void *s, size_t n)
+{
+  ft_memset(s, '\0', n);
+}
+
+</pre>
 
 
 <pre class="code">
@@ -143,111 +220,734 @@ void  ft_bzero(void *s, size_t n)
       <li id="memcpy">memcpy<a href="#memcpy" class="clickable-heading">memcpy</a>
         <div class="content hide">
             <h2>memcpy</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_memcpy</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+void    *ft_memcpy(void *dst, const void *src, size_t n)
+{
+        char            *d;
+        const char      *s;
+
+        d = dst;
+        s = src;
+        if (dst == src)
+                return (0);
+        while (n--)
+                *d++ = *s++;
+        return (dst);
+}
+
+</pre>
         </div>
       </li>
       <li id="memccpy">memccpy<a href="#memccpy" class="clickable-heading">memccpy</a>
         <div class="content hide">
             <h2>memccpy</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_memccpy</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+void            *ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+        unsigned char   x;
+        unsigned char   *dst_copy;
+        unsigned char   *src_copy;
+        size_t                  i;
+
+        x = ((unsigned char)c);
+        dst_copy = ((unsigned char *)dst);
+        src_copy = ((unsigned char *)src);
+        i = 0;
+        if (dst == src)
+                return (0);
+        while (i < n)
+        {
+                dst_copy[i] = src_copy[i];
+                if (src_copy[i] == x)
+                        return (&dst_copy[i + 1]);
+                i++;
+        }
+        return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="memmove">memmove<a href="#memmove" class="clickable-heading">memmove</a>
         <div class="content hide">
             <h2>memmove</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_memmove</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+void    *ft_memmove(void *dst, const void *src, size_t len)
+{
+        char                    *d;
+        const char              *s;
+        const char              *lasts;
+        char                    *lastd;
+
+        d = dst;
+        s = src;
+        lasts = s + (len - 1);
+        lastd = d + (len - 1);
+        if (src == dst)
+                return (0);
+        if (d < s)
+                while (len--)
+                        *d++ = *s++;
+        else
+                while (len--)
+                        *lastd-- = *lasts--;
+        return (dst);
+}
+
+</pre>
         </div>
       </li>
       <li id="memchr">memchr<a href="#memchr" class="clickable-heading">memchr</a>
         <div class="content hide">
             <h2>memchr</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_memchr</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+void    *ft_memchr(const void *s, int c, size_t n)
+{
+        const unsigned char *src;
+
+        src = (const unsigned char *)s;
+        while (n)
+        {
+                if (*src == (unsigned char)c)
+                        return ((void *)src);
+                src++;
+                n--;
+        }
+        return (NULL);
+}
+
+</pre>
         </div>
       </li>
       <li id="memcmp">memcmp<a href="#memcmp" class="clickable-heading">memcmp</a>
         <div class="content hide">
             <h2>memcmp</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_memcmp</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+        const unsigned char *str1;
+        const unsigned char *str2;
+        size_t                          i;
+
+        str1 = (const unsigned char *)s1;
+        str2 = (const unsigned char *)s2;
+        i = 0;
+        while (i < n)
+        {
+                if (str1[i] != str2[i])
+                        return (str1[i] - str2[i]);
+                i++;
+        }
+        return (0);
+}
+
+</pre>
+
         </div>
       </li>
       <li id="strlen">strlen<a href="#strlen" class="clickable-heading">strlen</a>
         <div class="content hide">
             <h2>strlen</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strlen</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+size_t          ft_strlen(const char *s)
+{
+        int     i;
+
+        i = 0;
+        while (s[i])
+                i++;
+        return (i);
+}
+
+</pre>
+
         </div>
       </li>
       <li id="strlcpy">strlcpy<a href="#strlcpy" class="clickable-heading">strlcpy</a>
         <div class="content hide">
             <h2>strlcpy</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strlcpy</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+size_t          ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+        size_t i;
+
+        i = 0;
+        if (src == 0)
+                return (0);
+        if (dstsize > 0)
+        {
+                while (src[i] != '\0' && i < (dstsize - 1))
+                {
+                        dst[i] = src[i];
+                        i++;
+                }
+                dst[i] = '\0';
+        }
+        return (ft_strlen(src));
+}
+
+</pre>
         </div>
       </li>
       <li id="strlcat">strlcat<a href="#strlcat" class="clickable-heading">strlcat</a>
         <div class="content hide">
             <h2>strlcat</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strlcat</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+        size_t i;
+        size_t len_src;
+        size_t len_dst;
+        size_t j;
+
+        len_dst = ft_strlen(dst);
+        len_src = ft_strlen(src);
+        i = len_dst;
+        if (dst == src)
+                return (0);
+        if (dstsize != 0 && i < (dstsize - 1))
+        {
+                j = 0;
+                while (i < (dstsize - 1) && src[j] != '\0')
+                {
+                        dst[i] = src[j];
+                        i++;
+                        j++;
+                }
+                dst[i] = '\0';
+        }
+        if (len_dst > dstsize)
+                return (dstsize + len_src);
+        return (len_dst + len_src);
+}
+
+</pre>
         </div>
       </li>
       <li id="strchr">strchr<a href="#strchr" class="clickable-heading">strchr</a>
         <div class="content hide">
             <h2>strchr</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strchr</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+char    *ft_strchr(const char *s, int c)
+{
+        int             i;
+        int             len;
+        char    *scpy;
+
+        scpy = (char *)s;
+        i = 0;
+        len = ft_strlen(scpy);
+        if (c == '\0')
+                return (&scpy[len]);
+        while (scpy[i] != '\0')
+        {
+                if (scpy[i] == c)
+                        return (&scpy[i]);
+                i++;
+        }
+        return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="strrchr">strrchr<a href="#strrchr" class="clickable-heading">strrchr</a>
         <div class="content hide">
             <h2>strrchr</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strrchr</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+char    *ft_strrchr(const char *s, int c)
+{
+        int             i;
+        int             len;
+        char    *scpy;
+
+        scpy = (char *)s;
+        len = ft_strlen(scpy);
+        i = len - 1;
+        if (c == '\0')
+                return (&scpy[len]);
+        while (i >= 0)
+        {
+                if (scpy[i] == c)
+                        return (&scpy[i]);
+                i--;
+        }
+        return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="strnstr">strnstr<a href="#strnstr" class="clickable-heading">strnstr</a>
         <div class="content hide">
             <h2>strnstr</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strnstr</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+        size_t  i;
+        size_t  j;
+        char    *hay;
+        char    *need;
+
+        hay = (char *)haystack;
+        need = (char *)needle;
+        if (need[0] == '\0')
+                return (hay);
+        i = 0;
+        while (hay[i] != '\0')
+        {
+                j = 0;
+                if (hay[i] == need[0])
+                {
+                        while (hay[i + j] == need[j] &&
+                                        (j + i) < len && need[j] != '\0')
+                                j++;
+                        if (need[j] == '\0')
+                                return (&hay[i]);
+                }
+                i++;
+        }
+        return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="strncmp">strncmp<a href="#strncmp" class="clickable-heading">strncmp</a>
         <div class="content hide">
             <h2>strncmp</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strncmp</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+        unsigned char   *s1_copy;
+        unsigned char   *s2_copy;
+        size_t                  i;
+
+        s1_copy = ((unsigned char *)s1);
+        s2_copy = ((unsigned char *)s2);
+        i = 0;
+        while (i < n && (s1_copy[i] != '\0' || s2_copy[i] != '\0'))
+        {
+                if (s1_copy[i] != s2_copy[i])
+                        return (s1_copy[i] - s2_copy[i]);
+                i++;
+        }
+        return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="isalpha">isalpha<a href="#isalpha" class="clickable-heading">isalpha</a>
         <div class="content hide">
             <h2>isalpha</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_isalpha</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_isalpha(int c)
+{
+        if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+                return (1);
+        return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="isdigit">isdigit<a href="#isdigit" class="clickable-heading">isdigit</a>
         <div class="content hide">
             <h2>isdigit</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_isdigit</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_isdigit(int c)
+{
+        if (c >= '0' && c <= '9')
+                return (1);
+        return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="isalnum">isalnum<a href="#isalnum" class="clickable-heading">isalnum</a>
         <div class="content hide">
             <h2>isalnum</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_isalnum</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_isalnum(int c)
+{
+        if ((c >= '0' && c <= '9') ||
+                (c >= 'A' && c <= 'Z') ||
+                (c >= 'a' && c <= 'z'))
+                return (1);
+        else
+                return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="isascii">isascii<a href="#isascii" class="clickable-heading">isascii</a>
         <div class="content hide">
             <h2>isascii</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_isascii</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_isascii(int c)
+{
+        int             y;
+
+        if (c >= 0 && c <= 127)
+                y = 1;
+        else
+                y = 0;
+        return (y);
+}
+
+</pre>
         </div>
       </li>
       <li id="isprint">isprint<a href="#isprint" class="clickable-heading">isprint</a>
         <div class="content hide">
             <h2>isprint</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_isprint</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_isprint(int c)
+{
+        if (c >= 32 && c <= 126)
+                return (1);
+        return (0);
+}
+
+</pre>
         </div>
       </li>
       <li id="toupper">toupper<a href="#toupper" class="clickable-heading">toupper</a>
         <div class="content hide">
             <h2>toupper</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_toupper</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_toupper(int c)
+{
+        if (c >= 'a' && c <= 'z')
+                c -= 32;
+        return (c);
+}
+
+</pre>
         </div>
       </li>
       <li id="tolower">tolower<a href="#tolower" class="clickable-heading">tolower</a>
         <div class="content hide">
             <h2>tolower</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_tolower</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+int             ft_tolower(int c)
+{
+        if (c >= 'A' && c <= 'Z')
+                c += 32;
+        return (c);
+}
+
+</pre>
         </div>
       </li>
       <li id="calloc">calloc<a href="#calloc" class="clickable-heading">calloc</a>
         <div class="content hide">
             <h2>calloc</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_calloc</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+void    *ft_calloc(size_t count, size_t size)
+{
+        char    *str;
+        size_t  i;
+
+        i = 0;
+        str = (char *)malloc(count * size);
+        if (str == 0)
+                return (0);
+        while (i < count * size)
+        {
+                str[i] = 0;
+                i++;
+        }
+        return ((void *)str);
+}
+
+</pre>
         </div>
       </li>
       <li id="strdup">strdup<a href="#strdup" class="clickable-heading">strdup</a>
         <div class="content hide">
             <h2>strdup</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strdup</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+char    *ft_strdup(const char *s1)
+{
+        char    *s1_copy;
+        size_t  len;
+        size_t  i;
+
+        len = ft_strlen(s1);
+        s1_copy = malloc((len + 1) * sizeof(char));
+        i = 0;
+        if (s1_copy == 0)
+                return (0);
+        while (i < len)
+        {
+                s1_copy[i] = s1[i];
+                i++;
+        }
+        s1_copy[i] = '\0';
+        return (s1_copy);
+}
+
+</pre>
         </div>
       </li>
       <li id="ft_strjoin">ft_strjoin<a href="#ft_strjoin" class="clickable-heading">ft_strjoin</a>
         <div class="content hide">
             <h2>ft_strjoin</h2>
+            <pre>
+
+            </pre>
+            <hr>
+            <pre>
+
+            </pre>
+            <h2>ft_strjoin</h2>
+<pre class="code">
+#include <span class="magenta">"libft.h"</span>
+
+char    *ft_strjoin(const char *s1, const char *s2)
+{
+        char    *sjoin;
+        size_t  size;
+        size_t  i;
+        size_t  j;
+
+        if (s1 == 0 || s2 == 0)
+                return (0);
+        size = ft_strlen(s1) + ft_strlen(s2) + 1;
+        sjoin = malloc(size * sizeof(char));
+        if (sjoin == 0)
+                return (0);
+        i = 0;
+        while (i < ft_strlen(s1))
+        {
+                sjoin[i] = s1[i];
+                i++;
+        }
+        j = 0;
+        while (j < ft_strlen(s2))
+        {
+                sjoin[i + j] = s2[j];
+                j++;
+        }
+        sjoin[i + j] = '\0';
+        return (sjoin);
+}
+
+</pre>
         </div>
       </li>
     </ul>
