@@ -129,34 +129,11 @@ int  ft_atoi(const char *str)
 
 
 <pre class="code">
-include <span class="magenta">"libft.h"</span>
+#include <span class="magenta">"libft.h"</span>
 
-int  ft_atoi(const char *str)
+void  ft_bzero(void *s, size_t n)
 {
-  int i;
-  int n;
-  int sinal;
-
-  i = 0;
-  while (str[i] == '\t' || str[i] == '\n'|| str[i] == '\r' ||
-          str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
-        i++;
-  sinal = 0;
-  if (str[i] == '-' || str[i] == '+')
-  {
-    if (str[i] == '-')
-          sinal = 1;
-      i++;
-  }
-  n = 0;
-  while (str[i] >= '0' && str[i] <= '9')
-  {
-      n = n * 10 + str[i] - '0';
-      i++;
-  }
-  if (sinal > 0)
-      n = n * (- 1);
-  return (n);
+  ft_memset(s, '\0', n);
 }
 
 </pre>
