@@ -177,7 +177,7 @@ var mapObj = {
    int:"<span class='green'>int</span>",
    const:"<span class='green'>const</span>",
    char:"<span class='green'>char</span>",
-   include:"<span class='cyan'>#include</span>",
+   include:"<span class='cyan'>include</span>",
    0:"<span class='magenta'>0</span>",
    1:"<span class='magenta'>1</span>",
    2:"<span class='magenta'>2</span>",
@@ -194,8 +194,9 @@ var mapObj = {
    "\\v":"<span class='magenta'>\\v</span>",
    "\\f":"<span class='magenta'>\\f</span>",
    "\'\-":"<span class='magenta'>'-</span>",
-   "\'\+'":"<span class='magenta'>'+</span>",
-   "\'":"<span class='magenta'>'</span>"
+   "\'\+":"<span class='magenta'>'+</span>",
+   "\'":"<span class='magenta'>'</span>",
+   "\#":"<span class='cyan'>\#</span>"
 
 };
 
@@ -216,7 +217,7 @@ function addLoadEvent(func) {
     oldText = document.getElementsByClassName("code");
     for (i = 0; i<oldText.length; i++){
       newText = oldText[i].innerHTML;
-      newText = newText.replace(/if|while|return|int|const|char|include|0|1|2|3|4|5|6|7|8|9|\\t|\\n|\\r|\\v|\\f|\'\-|\'\+|\'/g, function(matched){
+      newText = newText.replace(/if|while|return|int|const|char|include|0|1|2|3|4|5|6|7|8|9|\\t|\\n|\\r|\\v|\\f|\'\-|\'\+|\'|\#/g, function(matched){
         return mapObj[matched];
       });
       oldText[i].innerHTML = newText;
