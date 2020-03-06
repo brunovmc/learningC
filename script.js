@@ -190,7 +190,6 @@ var mapObj = {
    7:"<span class='magenta'>7</span>",
    8:"<span class='magenta'>8</span>",
    9:"<span class='magenta'>9</span>",
-   "\\":"<span class='magenta'>\\</span>",
    "\\t":"<span class='magenta'>\\t</span>",
    "\\n":"<span class='magenta'>\\n</span>",
    "\\r":"<span class='magenta'>\\r</span>",
@@ -199,6 +198,7 @@ var mapObj = {
    "\'\-":"<span class='magenta'>'-</span>",
    "\'\+":"<span class='magenta'>'+</span>",
    "\'":"<span class='magenta'>'</span>",
+   "\\":"<span class='magenta'>\\</span>",
    "\#":"<span class='cyan'>\#</span>"
 
 };
@@ -220,7 +220,7 @@ function addLoadEvent(func) {
     oldText = document.getElementsByClassName("code");
     for (i = 0; i<oldText.length; i++){
       newText = oldText[i].innerHTML;
-      newText = newText.replace(/if|while|return|int|const|char|include|void|size_t|0|1|2|3|4|5|6|7|8|9|\\|\\t|\\n|\\r|\\v|\\f|\'\-|\'\+|\'|\#/g, function(matched){
+      newText = newText.replace(/if|while|return|int|const|char|include|void|size_t|0|1|2|3|4|5|6|7|8|9|\\t|\\n|\\r|\\v|\\f|\'\-|\'\+|\'|\\|\#/g, function(matched){
         return mapObj[matched];
       });
       oldText[i].innerHTML = newText;
