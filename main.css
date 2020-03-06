@@ -138,6 +138,11 @@ pre{
 	transform: rotate(-13deg);
 }
 
+.decoration img{
+	background-color: white;
+	border-radius: 50%;
+}
+
 .lang{
 	float: right;
 	display: inline;
