@@ -73,7 +73,7 @@
               </pre>
               <h2>ft_atoi</h2>
 <pre class="code">
-include <span class="magenta">"libft.h"</span>
+#include <span class="magenta">"libft.h"</span>
 
 int  ft_atoi(const char *str)
 {
@@ -126,6 +126,40 @@ int  ft_atoi(const char *str)
 
             <p><span class="cyan">#include</span> <span class="magenta">&#60;strings.h&#62;</span></p>
             <p><span class="green">int</span class="green"> bzero (<span class="green">void</span> *s, <span class="green">size_t</span> n);</p>
+
+
+<pre class="code">
+include <span class="magenta">"libft.h"</span>
+
+int  ft_atoi(const char *str)
+{
+  int i;
+  int n;
+  int sinal;
+
+  i = 0;
+  while (str[i] == '\t' || str[i] == '\n'|| str[i] == '\r' ||
+          str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
+        i++;
+  sinal = 0;
+  if (str[i] == '-' || str[i] == '+')
+  {
+    if (str[i] == '-')
+          sinal = 1;
+      i++;
+  }
+  n = 0;
+  while (str[i] >= '0' && str[i] <= '9')
+  {
+      n = n * 10 + str[i] - '0';
+      i++;
+  }
+  if (sinal > 0)
+      n = n * (- 1);
+  return (n);
+}
+
+</pre>
 
         </div>
       </li><!-- ==============================================================================================BZERO=END=============================-->
