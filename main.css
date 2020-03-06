@@ -22,23 +22,8 @@
 }
 
 h1 {
-  z-index: 1;
-  text-shadow: -0.04em 0 red, 0.04em 0 white;
-  margin-left: 1rem;
-  cursor: default;
-  font-size: 7rem;
-  letter-spacing: 1px;
-  position: absolute;
-  top: 29%;
-  transform: translateX(-50%) translateY(-100%);
-  transition: all 0.6s ease-in-out;
-  &:hover {
-    letter-spacing: 2px;
-    text-shadow: -0.06em 0 red, 0.06em 0 cyan;
-  }
-  &:hover ~ .line {
-    opacity: 0;
-  }
+	font-family: 'VT323', monospace;
+  font-size: 9rem;
 }
 
 
@@ -49,6 +34,7 @@ body{
 	background-color: #000;
 	overflow-x: hidden;
 	color: white;
+
 }
 .header{
   width: 100%;
