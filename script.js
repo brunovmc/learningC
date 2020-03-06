@@ -8,11 +8,18 @@ function scrollFunction() {
       document.getElementById("inputTitle").style.fontSize = "28px";
       document.getElementById("inputTitle").style.margin = "0 0 0 65%";
       document.getElementById("myInput").style.width = "40%";
+      document.getElementById("title").style.transform = "scale(0.7)";
+      document.getElementById("title").style.marginLeft = "-28%";
+      document.getElementById("title").style.marginBottom = "-2%";
 
     } else {
       document.getElementById("inputTitle").style.fontSize = "60px";
         document.getElementById("inputTitle").style.margin = "0 0 0 23%";
           document.getElementById("myInput").style.width = "70%";
+          document.getElementById("title").style.transform = "scale(1)";
+          document.getElementById("title").style.marginLeft = "0";
+          document.getElementById("title").style.marginBottom = "0";
+
 
     }
   }else if(screen.width <= 900){

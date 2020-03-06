@@ -9,11 +9,11 @@
   </head>
   <body>
 
-    <div class="lang">
+    <!-- <div class="lang">
       <div class="flag" id="EN">EN</div>
       <div class="flag" id="PT">PT</div>
-    </div>
-
+    </div> -->
+<div class="overlay"></div>
     <div class="header">
       <div class="decoration">
         <img src="falloutCommans.png" alt="">
@@ -24,9 +24,9 @@
 
     </div>
     <div class="inputTitle" id="inputTitle">
-      <h1 class="cyan" onclick="topFunction()">C functions</h1>
+      <h1 class="cyan" onclick="topFunction()" id="title">C functions</h1>
       <h6><span class="yellow">known functions</span> (<span id="knownCommands" class="magenta">  0 </span>);</h6>
-      <input type="text" id="myInput" onkeyup="searchList()" placeholder="Search for function..." title="Type in a name">
+      <input type="text" id="myInput" onkeyup="searchList()" placeholder="Search for function..."onfocus="this.placeholder = ''"onblur="this.placeholder = 'Search for function...'" title="Type in a name">
       <button id="orderBtn" onclick="sortListDir()">order</button>
     </div>
 
