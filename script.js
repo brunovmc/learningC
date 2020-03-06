@@ -180,6 +180,10 @@ var mapObj = {
    include:"<span class='cyan'>include</span>",
    void:"<span class='green'>void</span>",
    size_t:"<span class='green'>size_t</span>",
+<<<<<<< HEAD
+   unsigned:"<span class='green'>unsigned</span>",
+=======
+>>>>>>> 295843f69d8392c68f80c9bd312a0ae36d525853
    0:"<span class='magenta'>0</span>",
    1:"<span class='magenta'>1</span>",
    2:"<span class='magenta'>2</span>",
@@ -220,7 +224,11 @@ function addLoadEvent(func) {
     oldText = document.getElementsByClassName("code");
     for (i = 0; i<oldText.length; i++){
       newText = oldText[i].innerHTML;
+<<<<<<< HEAD
+      newText = newText.replace(/if|while|return|int|const|char|include|void|size_t|unsigned|0|1|2|3|4|5|6|7|8|9|\\t|\\n|\\r|\\v|\\f|\'\-|\'\+|\'|\\|\#/g, function(matched){
+=======
       newText = newText.replace(/if|while|return|int|const|char|include|void|size_t|0|1|2|3|4|5|6|7|8|9|\\t|\\n|\\r|\\v|\\f|\'\-|\'\+|\'|\\|\#/g, function(matched){
+>>>>>>> 295843f69d8392c68f80c9bd312a0ae36d525853
         return mapObj[matched];
       });
       oldText[i].innerHTML = newText;
