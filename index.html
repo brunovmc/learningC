@@ -24,7 +24,7 @@
     </div>
     <div class="inputTitle" id="inputTitle">
       <h1 class="cyan">C functions</h1>
-      <h6><span class="yellow">known functions</span> (<span id="knownCommands" class="magenta">  0 </span>)</h6>
+      <h6><span class="yellow">known functions</span> (<span id="knownCommands" class="magenta">  0 </span>);</h6>
       <input type="text" id="myInput" onkeyup="searchList()" placeholder="Search for function..." title="Type in a name">
       <button onclick="sortListDir()">order</button>
     </div>
@@ -46,6 +46,7 @@
               <p>
                 a função remove do inicio da string quantas vezes houverem os seguintes:
 <pre>
+  <code>
 
               <span class="pink">'\t'</span> horizontal tab
               <span class="pink">'\n'</span> newline
@@ -53,7 +54,7 @@
               <span class="pink">'\v'</span> vertical tab
               <span class="pink">'\f'</span> formfeed page break
               <span class="magenta">' '</span>  space
-
+  </code>
 </pre>
                 </p>
                 <p>verifica <u>uma vez</u> se o sinal é positivo ou negativo</p>
@@ -71,35 +72,35 @@
 
               </pre>
               <h2>ft_atoi</h2>
-<pre>
-<span class="cyan">#include</span> <span class="magenta">"libft.h"</span>
+<pre class="code">
+include <span class="magenta">"libft.h"</span>
 
-<span class="green">int</span>  ft_atoi(<span class="green">const char</span> *str)
+int  ft_atoi(const char *str)
 {
-  <span class="green">int</span> i;
-  <span class="green">int</span> n;
-  <span class="green">int</span> sinal;
+  int i;
+  int n;
+  int sinal;
 
-  i = <span class="magenta">0</span>;
-  <span class="yellow">while</span> (str[i] == <span class="pink">'\t'</span> || str[i] == <span class="pink">'\n'</span> || str[i] == <span class="pink">'\r'</span> ||
-          str[i] == <span class="pink">'\v'</span> || str[i] == <span class="pink">'\f'</span> || str[i] == <span class="magenta">' '</span>)
+  i = 0;
+  while (str[i] == '\t' || str[i] == '\n'|| str[i] == '\r' ||
+          str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
         i++;
-  sinal = <span class="magenta">0</span>;
-  <span class="yellow">if</span> (str[i] == <span class="magenta">'-'</span> || str[i] == <span class="magenta">'+'</span>)
+  sinal = 0;
+  if (str[i] == '-' || str[i] == '+')
   {
-      <span class="yellow">if</span> (str[i] == <span class="magenta">'-'</span>)
-          sinal = <span class="magenta">1</span>;
+    if (str[i] == '-')
+          sinal = 1;
       i++;
   }
-  n = <span class="magenta">0</span>
-  while (str[i] >= <span class="magenta">'0'</span> && str[i] <= <span class="magenta">'9'</span>)
+  n = 0;
+  while (str[i] >= '0' && str[i] <= '9')
   {
-      n = n * 10 + str[i] - <span class="magenta">'0'</span>;
+      n = n * 10 + str[i] - '0';
       i++;
   }
-  <span class="yellow">if</span> (sinal > <span class="magenta">0</span>)
-      n = n * (-<span class="magenta">1</span>);
-  <span class="yellow">return</span> (n);
+  if (sinal > 0)
+      n = n * (- 1);
+  return (n);
 }
 
 </pre>
@@ -248,8 +249,6 @@
       </div>
 
     </div> -->
-
-
 
 
 

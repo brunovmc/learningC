@@ -123,3 +123,102 @@ document.onreadystatechange = function () {
     document.getElementById("knownCommands").innerHTML = number;
   }
 }
+
+
+// =============================================================================================================================
+// =============================================================MARKUP==========================================================
+// =============================================================================================================================
+// var codeTags = document.getElementsByTagName("pre");
+// Array.prototype.forEach.call(elements, function(el, i){
+//
+// });
+//
+//
+//
+//
+//
+// var strReg1 = /"(.*?)"/g,
+//     strReg2 = /'(.*?)'/g,
+//     specialReg = /\b(new|var|if|do|function|while|switch|for|foreach|in|continue|break)(?=[^\w])/g,
+//     specialCommentReg  = /(\/\*.*\*\/)/g,
+//     inlineCommentReg = /(\/\/.*)/g;
+//
+// codeTags.each(function (){
+//         var string = this.innerHTML,
+//         parsed = string.replace(strReg1,'<span class="string">"$1"</span>');
+//         parsed = parsed.replace(strReg2,"<span class=\"string\">'$1'</span>");
+//         parsed = parsed.replace(specialReg,'<span class="yellow">$1</span>');
+//         parsed = parsed.replace(specialCommentReg,'<span class="special-comment">$1</span>');
+//         parsed = parsed.replace(inlineCommentReg,'<span class="special-comment">$1</span>');
+//
+//         this.innerHTML = parsed;
+//     });
+
+
+
+
+// function highlight(text) {
+//   var inputText = document.querySelector(".codeExample");
+//   var innerHTML = inputText.innerHTML;
+//   var index = innerHTML.indexOf(text);
+//   if (index >= 0) {
+//    innerHTML = innerHTML.substring(0,index) + "<span class='yellow'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+//    inputText.innerHTML = innerHTML;
+//   }
+// }
+//
+// highlight('if');
+//
+// document.querySelector(".codeExample").innerText.replace(/if/,"<span class='yellow'>if</span>");
+var mapObj = {
+   if:"<span class='yellow'>if</span>",
+   while:"<span class='yellow'>while</span>",
+   return:"<span class='yellow'>return</span>",
+   int:"<span class='green'>int</span>",
+   const:"<span class='green'>const</span>",
+   char:"<span class='green'>char</span>",
+   include:"<span class='cyan'>#include</span>",
+   0:"<span class='magenta'>0</span>",
+   1:"<span class='magenta'>1</span>",
+   2:"<span class='magenta'>2</span>",
+   3:"<span class='magenta'>3</span>",
+   4:"<span class='magenta'>4</span>",
+   5:"<span class='magenta'>5</span>",
+   6:"<span class='magenta'>6</span>",
+   7:"<span class='magenta'>7</span>",
+   8:"<span class='magenta'>8</span>",
+   9:"<span class='magenta'>9</span>",
+   "\\t":"<span class='magenta'>\\t</span>",
+   "\\n":"<span class='magenta'>\\n</span>",
+   "\\r":"<span class='magenta'>\\r</span>",
+   "\\v":"<span class='magenta'>\\v</span>",
+   "\\f":"<span class='magenta'>\\f</span>",
+   "\'\-":"<span class='magenta'>'-</span>",
+   "\'\+'":"<span class='magenta'>'+</span>",
+   "\'":"<span class='magenta'>'</span>"
+
+};
+
+function addLoadEvent(func) {
+   var oldonload = window.onload;
+   if (typeof window.onload != 'function') {
+     window.onload = func;
+   } else {
+     window.onload = function() {
+       if (oldonload) {
+         oldonload();
+       }
+       func();
+     }
+   }
+ }
+ addLoadEvent(function() {
+    oldText = document.getElementsByClassName("code");
+    for (i = 0; i<oldText.length; i++){
+      newText = oldText[i].innerHTML;
+      newText = newText.replace(/if|while|return|int|const|char|include|0|1|2|3|4|5|6|7|8|9|\\t|\\n|\\r|\\v|\\f|\'\-|\'\+|\'/g, function(matched){
+        return mapObj[matched];
+      });
+      oldText[i].innerHTML = newText;
+    }
+ });
