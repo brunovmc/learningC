@@ -1,5 +1,6 @@
 highlight selector selecting numbers on s1 s2
 language selection
+mobile responsiveness needs fixing
 ====================================================================
 explanation of 25 functions
 add english

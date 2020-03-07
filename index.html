@@ -114,6 +114,10 @@ int  ft_atoi(const char *str)
 
         <div class="content hide">
             <h2>ft_substr</h2>
+            <pre class="code">char *ft_substr(char const *s, unsigned int start, size_t len);</pre>
+            <p>Aloca memoria(usando malloc) e retorna uma substring da string s</p>
+            <p>que inicia em start e segue até o tamanho maximo len.</p>
+            <p>Retorna NULL se a alocação falhar.</p>
             <pre>
 
             </pre>
@@ -186,6 +190,8 @@ void    *ft_memset(void *dest, int c, size_t len)
 
             <p><span class="cyan">#include</span> <span class="magenta">&#60;strings.h&#62;</span></p>
             <p><span class="green">int</span class="green"> bzero (<span class="green">void</span> *s, <span class="green">size_t</span> n);</p>
+            <p>A função <span class="purple">bzero()</span> escreve bytes zero <span class="yellow">n</span> vezes pela string <span class="yellow">s</span>.</p>
+            <p>Se <span class="yellow">n</span> for <span class="magenta">0</span>, <span class="purple">bzero()</span> nao faz nada.</p>
             <pre>
 
             </pre>
@@ -206,16 +212,6 @@ void  ft_bzero(void *s, size_t n)
 
 </pre>
 
-
-<pre class="code">
-#include <span class="magenta">"libft.h"</span>
-
-void  ft_bzero(void *s, size_t n)
-{
-  ft_memset(s, '\0', n);
-}
-
-</pre>
 
         </div>
       </li><!-- ==============================================================================================BZERO=END=============================-->
@@ -509,6 +505,13 @@ size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
       <li id="strchr">strchr<a href="#strchr" class="clickable-heading">strchr</a>
         <div class="content hide">
             <h2>strchr</h2>
+            <pre class="code">#include &#60;string.h&#62;</pre>
+            <pre class="code">char *strchr(const char *s, int c);</pre>
+            <p>A função localiza a primeira ocorrencia de c (convertido para char)</p>
+            <p>na string apontada por s.</p>
+            <p>\0 é considerado parte da string</p>
+            <p>Ela retorna a posição do charactere na string</p>
+            <p>ou NULL se o character nao for encontrado.</p>
             <pre>
 
             </pre>
@@ -546,6 +549,13 @@ char    *ft_strchr(const char *s, int c)
       <li id="strrchr">strrchr<a href="#strrchr" class="clickable-heading">strrchr</a>
         <div class="content hide">
             <h2>strrchr</h2>
+            <pre class="code">#include &#60;string.h&#62;</pre>
+            <pre class="code">char *strrchr(const char *s, int c);</pre>
+            <p>A função localiza a ultima ocorrencia de c (convertido para char)</p>
+            <p>na string apontada por s.</p>
+            <p>\0 é considerado parte da string</p>
+            <p>Ela retorna a posição do charactere na string</p>
+            <p>ou NULL se o character nao for encontrado.</p>
             <pre>
 
             </pre>
@@ -583,6 +593,14 @@ char    *ft_strrchr(const char *s, int c)
       <li id="strnstr">strnstr<a href="#strnstr" class="clickable-heading">strnstr</a>
         <div class="content hide">
             <h2>strnstr</h2>
+            <pre class="code">#include &#60;string.h&#62;</pre>
+            <pre class="code">char *strnstr(const char *haystack, const char *needle, size_t len);</pre>
+            <p>A função procura a primeira ocorrencia da string needle dentro da string haystack.</p>
+            <p>Essa procura é limitada pelo argumento len.</p>
+            <p>strnstr pode ter problemas de portabilidade</p>
+            <p>Se needle é uma string vazia a função retorna o haystack.</p>
+            <p>Se needle não esta em haystack, retorna NULL.</p>
+            <p>Se encontrado needle em haystack a função retorna o ponteiro da primeira occorrencia.</p>
             <pre>
 
             </pre>
@@ -663,6 +681,11 @@ int             ft_strncmp(const char *s1, const char *s2, size_t n)
       <li id="isalpha">isalpha<a href="#isalpha" class="clickable-heading">isalpha</a>
         <div class="content hide">
             <h2>isalpha</h2>
+            <pre class="code">#include &#60;ctype.h&#62;</pre>
+            <pre class="code">int isalpha(int c);</pre>
+            <p>A função verifica se o charactere passado é um caratere do alfabeto.</p>
+            <p>retorna 1 se verdadeiro</p>
+            <p>retorna 0 se falso</p>
             <pre>
 
             </pre>
@@ -687,6 +710,9 @@ int             ft_isalpha(int c)
       <li id="isdigit">isdigit<a href="#isdigit" class="clickable-heading">isdigit</a>
         <div class="content hide">
             <h2>isdigit</h2>
+            <pre class="code">#include &#60;ctype.h&#62;</pre>
+              <pre class="code">int isdigit(int c);</pre>
+            <p>A função verifica se o charactere passado é um digito entre 0 e 9</p>
             <pre>
 
             </pre>
@@ -711,6 +737,11 @@ int             ft_isdigit(int c)
       <li id="isalnum">isalnum<a href="#isalnum" class="clickable-heading">isalnum</a>
         <div class="content hide">
             <h2>isalnum</h2>
+            <pre class="code">#include &#60;ctype.h&#62;</pre>
+            <pre class="code">int isalnum(int c);</pre>
+            <p>função verifica se o charactere passado é uma letra ou numero.</p>
+            <p>retorna 1 se verdadeiro</p>
+            <p>retorna 0 se falso</p>
             <pre>
 
             </pre>
@@ -738,6 +769,9 @@ int             ft_isalnum(int c)
       <li id="isascii">isascii<a href="#isascii" class="clickable-heading">isascii</a>
         <div class="content hide">
             <h2>isascii</h2>
+            <pre class="code">#include &#60;ctype.h&#62;</pre>
+            <pre class="code">int isascii(int c);</pre>
+            <p>A função testa se o character passado consta na tabla ascii.</p>
             <pre>
 
             </pre>
@@ -766,6 +800,9 @@ int             ft_isascii(int c)
       <li id="isprint">isprint<a href="#isprint" class="clickable-heading">isprint</a>
         <div class="content hide">
             <h2>isprint</h2>
+            <pre class="code">#include &#60;ctype.h&#62;</pre>
+            <pre class="code">int isprint(int c);</pre>
+            <p>A função testa se o character passado é imprimivel.</p>
             <pre>
 
             </pre>
@@ -790,6 +827,9 @@ int             ft_isprint(int c)
       <li id="toupper">toupper<a href="#toupper" class="clickable-heading">toupper</a>
         <div class="content hide">
             <h2>toupper</h2>
+            <pre class="code">#include &#60;ctype.h&#62;</pre>
+            <pre class="code">int toupper(int c);</pre>
+            <p>A função converte um charactere minusculo em maiusculo.</p>
             <pre>
 
             </pre>
@@ -814,6 +854,9 @@ int             ft_toupper(int c)
       <li id="tolower">tolower<a href="#tolower" class="clickable-heading">tolower</a>
         <div class="content hide">
             <h2>tolower</h2>
+            <pre class="code">#include &#60;ctype.h&#62;</pre>
+            <pre class="code">int toupper(int c);</pre>
+            <p>A função converte um charactere maiusculo em minusculo.</p>
             <pre>
 
             </pre>
@@ -838,6 +881,12 @@ int             ft_tolower(int c)
       <li id="calloc">calloc<a href="#calloc" class="clickable-heading">calloc</a>
         <div class="content hide">
             <h2>calloc</h2>
+            <pre class="code">#include <span class="magenta">&#60;stdlib.h&#62;</span> </pre>
+            <pre class="code">void *calloc(size_t count, size_t size);</pre>
+
+            <p> A função aloca a memoria requerida e retorna o ponteiro para o espaco alocado,</p>
+            <p>ou NULL se o requerimento falhar</p>
+            <p>a diferença entre <span class="purple">malloc()</span> e <span class="purple">calloc()</span> eh que malloc nao zera a memoria alocada</p>
             <pre>
 
             </pre>
@@ -909,6 +958,9 @@ char    *ft_strdup(const char *s1)
       <li id="ft_strjoin">ft_strjoin<a href="#ft_strjoin" class="clickable-heading">ft_strjoin</a>
         <div class="content hide">
             <h2>ft_strjoin</h2>
+            <pre class="code">char *ft_strjoin(char const *s1, char const *s2);</pre>
+            <p>Aloca memoria (usando malloc) e retorna o string novo produto da concatenação de s1 e s2, </p>
+            <p>ou NULL se a alocação falhar.</p>
             <pre>
 
             </pre>
