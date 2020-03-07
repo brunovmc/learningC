@@ -354,7 +354,7 @@ ul li{
 
 
 #myUL li a {
-  border: 1px solid #00dd00;
+  border: 2px solid #00dd00;
   margin-top: -0.9%; /* Prevent double borders */
   background-color: #2f332e;
   padding: 12px;
