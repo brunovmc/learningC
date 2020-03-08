@@ -26,7 +26,7 @@ h1 {
   font-size: 9rem;
 	text-shadow: -0.02em 0 red, 0.02em 0 white;
 	transition: 0.1s linear;
-	animation: flick 5s infinite;
+	/* animation: flick 5s infinite; */
 }
 @keyframes flick {
 	0% {text-shadow: -0.02em 0 red, 0.02em 0 white;}
@@ -41,7 +41,7 @@ h1 {
 	100% {text-shadow: -0.002em 0 red, 0.009em 0 white;}
 }
 h1:hover{
-	text-shadow: -0.06em 0 red, 0.009em 0 white;
+	animation: flick 5s infinite;
 }
 
 .clickable-heading{
@@ -114,10 +114,6 @@ body{
 
 .cyan{
 	color: #34ebeb!important;
-}
-
-.purple{
-	color: #b64aff;
 }
 
 .magenta{
@@ -316,7 +312,7 @@ ul li{
 
 }
 
-.linearBackground{}
+
 
 #myInput {
   background-position: 10px 12px;
@@ -370,10 +366,6 @@ ul li{
 
 
 #myUL li a {
-	background-position: 10px 12px;
-	background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
-	/* background-repeat: no-repeat; */
-	background-size: 100% 3px, 6px 100%;
   border: 2px solid #00dd00;
   margin-top: -0.9%; /* Prevent double borders */
   background-color: #2f332e;
@@ -481,11 +473,6 @@ ul li{
 	outline: none;
 }
 
-#flickerBtn:active{
-		background-color: #00ff00!important;
-		color: #2f332e;
-}
-
 .deactivated{
 	background-color: #ff0000!important;
 	border-color: #2f332e!important;
@@ -504,11 +491,6 @@ ul li{
 	background-color: #00dd00;
 	border-color: #2f332e;
 	color: #2f332e;
-}
-
-#orderBtn:active{
-		background-color: #ff0000!important;
-		color: #2f332e;
 }
 
 .buttonWrap{
