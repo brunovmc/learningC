@@ -6,7 +6,7 @@ function scrollFunction() {
 
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       document.getElementById("inputTitle").style.fontSize = "28px";
-      document.getElementById("inputTitle").style.margin = "0 0 0 65%";
+      document.getElementById("inputTitle").style.margin = "0 0 0 60%";
       document.getElementById("myInput").style.width = "40%";
 
     } else {
