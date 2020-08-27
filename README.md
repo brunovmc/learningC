@@ -1,5 +1,5 @@
 # C functions https://brunovmc.github.io/learningC/
-Uma tentativa de produzir manuais um pouco mais esclarecedores do que o deserto de informação que sao os man's
+Algumas funcoes da libft projeto inicial da escola 42
 
 criado por bvidigal @42saopaulo
 
